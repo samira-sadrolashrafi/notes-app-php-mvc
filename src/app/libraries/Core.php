@@ -3,12 +3,15 @@
 
 class Core
 {
-
-    public function __construct()
+    public function view($view, $data = [])
     {
+        if(file_exists('../app/views/' . $view . '.php')){
 
-        echo "MVC Core Loaded";
+            require_once '../app/views/' . $view . '.php';
 
+        }else{
+
+            die("View file not found");
+        }
     }
-
 }

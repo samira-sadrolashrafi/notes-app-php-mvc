@@ -10,31 +10,24 @@
     <title>Notes App</title>
 
 
-    <!-- Bootstrap CSS -->
     <link 
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
-        rel="stylesheet"
-    >
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" 
+    rel="stylesheet">
 
-
-    <!-- Custom CSS -->
-    <link 
-        href="http://localhost:8000/css/style.css" 
-        rel="stylesheet"
-    >
 
 </head>
 
 
-<body>
+<body class="bg-light">
 
-<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+
+<nav class="navbar navbar-dark bg-dark">
 
     <div class="container">
 
-        <a class="navbar-brand" href="#">
+        <span class="navbar-brand mb-0 h1">
             Notes App
-        </a>
+        </span>
 
     </div>
 

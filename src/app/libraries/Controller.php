@@ -3,8 +3,6 @@
 
 class Controller
 {
-
-
     public function model($model)
     {
 
@@ -15,11 +13,18 @@ class Controller
     }
 
 
-
     public function view($view, $data = [])
     {
 
-        require_once APPROOT . '/views/' . $view . '.php';
+        if(file_exists(APPROOT . '/views/' . $view . '.php')){
+
+            require_once APPROOT . '/views/' . $view . '.php';
+
+        } else {
+
+            die("View file not found");
+
+        }
 
     }
 

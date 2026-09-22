@@ -2,21 +2,17 @@
 
 require_once '../bootstrap.php';
 
+$auth = new AuthController();
+
+
+$auth->login();
+
 
 require_once APPROOT . '/views/layouts/header.php';
 
 
 ?>
 
-<div class="container mt-5">
-
-    <div class="alert alert-success">
-
-        Bootstrap Loaded Successfully
-
-    </div>
-
-</div>
 
 
 <?php
