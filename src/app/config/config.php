@@ -1,7 +1,5 @@
 <?php
 
-session_start();
-
 define('DB_HOST', 'php81_dev_environment_database');
 
 define('DB_USER', 'root');

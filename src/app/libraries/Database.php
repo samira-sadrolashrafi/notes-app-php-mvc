@@ -48,9 +48,9 @@ class Database
         $this->stmt = $this->dbh->prepare($sql);
     }
 
-    public function bind($param , $value){
+    public function bind($param , $value, $type = PDO::PARAM_STR){
 
-        $this->stmt->bindValue($param , $value);
+        $this->stmt->bindValue($param , $value, $type);
     }
 
     public function execute(){

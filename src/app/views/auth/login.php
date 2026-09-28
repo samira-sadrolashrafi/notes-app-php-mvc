@@ -28,7 +28,11 @@ require_once APPROOT . '/views/layouts/header.php';
 
 
 
-                    <form action="" method="POST" novalidate>
+                    <form
+                        action=""
+                        method="POST"
+                        novalidate
+                        autocomplete="off">
 
 
                         <div class="mb-3">
@@ -39,12 +43,12 @@ require_once APPROOT . '/views/layouts/header.php';
                             </label>
 
 
-                            <input 
+                            <input
                                 type="text"
                                 name="username"
                                 class="form-control"
                                 value="<?php echo $data['username']; ?>"
-                            >
+                                autocomplete="off">
 
 
                             <small class="text-danger">
@@ -65,11 +69,11 @@ require_once APPROOT . '/views/layouts/header.php';
                             </label>
 
 
-                            <input 
+                            <input
                                 type="password"
                                 name="password"
                                 class="form-control"
-                            >
+                                autocomplete="new-password">
 
 
                             <small class="text-danger">
@@ -80,9 +84,26 @@ require_once APPROOT . '/views/layouts/header.php';
                         </div>
 
 
+                        <div class="form-check mb-3">
 
+                            <input
+                                class="form-check-input"
+                                type="checkbox"
+                                name="remember"
+                                id="remember"
+                                value="1">
 
-                        <button class="btn btn-primary w-100">
+                            <label
+                                class="form-check-label"
+                                for="remember">
+
+                                مرا به خاطر بسپار
+
+                            </label>
+
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100">
 
                             ورود
 
@@ -94,6 +115,7 @@ require_once APPROOT . '/views/layouts/header.php';
 
 
 
+
                     <div class="text-center mt-4">
 
 
@@ -102,8 +124,9 @@ require_once APPROOT . '/views/layouts/header.php';
                         </span>
 
 
-                        <a href="#"
-                           class="text-decoration-none">
+                        <a
+                            href="?page=register"
+                            class="text-decoration-none">
 
                             ثبت نام کنید
 

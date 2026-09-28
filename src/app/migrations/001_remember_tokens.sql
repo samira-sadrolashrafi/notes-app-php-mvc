@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS remember_tokens (
+    id INT NOT NULL AUTO_INCREMENT,
+    user_id INT NOT NULL,
+    token_hash CHAR(64) NOT NULL UNIQUE,
+    expires_at DATETIME NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (id)
+);
