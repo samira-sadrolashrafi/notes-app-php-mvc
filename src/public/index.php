@@ -80,6 +80,13 @@ switch ($page) {
 
         break;
 
+    case 'profile':
+
+        $profile = new ProfileController();
+
+        $profile->index();
+
+        break;
 
     default:
 

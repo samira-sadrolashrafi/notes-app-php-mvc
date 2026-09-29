@@ -31,6 +31,7 @@ require_once APPROOT . '/database/seeders/NoteSeeder.php';
 require_once APPROOT . '/controllers/AuthController.php';
 require_once APPROOT . '/controllers/PagesController.php';
 require_once APPROOT . '/controllers/NotesController.php';
+require_once APPROOT . '/controllers/ProfileController.php';
 
 
 // Helpers

@@ -15,21 +15,18 @@
     <!-- Bootstrap RTL -->
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css"
-        rel="stylesheet"
-    >
+        rel="stylesheet">
 
 
     <!-- Persian Datepicker -->
     <link
         rel="stylesheet"
-        href="<?php echo URLROOT; ?>/public/vendor/persian-datepicker/persian-datepicker.min.css"
-    >
+        href="<?php echo URLROOT; ?>/public/vendor/persian-datepicker/persian-datepicker.min.css">
 
     <!-- CSS پروژه -->
     <link
         rel="stylesheet"
-        href="<?php echo URLROOT; ?>/public/css/style.css?v=3"
-    >
+        href="<?php echo URLROOT; ?>/public/css/style.css?v=3">
 
 </head>
 
@@ -37,37 +34,39 @@
 <body class="bg-light">
 
 
-<nav class="navbar navbar-dark bg-dark">
+    <nav class="navbar navbar-dark bg-dark">
 
-    <div class="container">
-
-
-        <span class="navbar-brand mb-0 h1">
-            Notes App
-        </span>
+        <div class="container">
 
 
-        <?php if (isLoggedIn()): ?>
-
-            <div class="d-flex align-items-center gap-3 ms-auto">
-                <span class="text-white">
-                <?php echo htmlspecialchars($_SESSION['user_name'] ?? '', ENT_QUOTES, 'UTF-8'); ?>
-                </span>
-
-                <a
-                href="?page=logout"
-                class="btn btn-outline-light btn-sm"
-                >
-
-                خروج
-
-                </a>
-            </div>
+            <span class="navbar-brand mb-0 h1">
+                Notes App
+            </span>
 
 
-        <?php endif; ?>
+            <?php if (isLoggedIn()): ?>
+
+                <div class="d-flex align-items-center gap-3 ms-auto">
+
+                    <a
+                        href="?page=profile"
+                        class="text-white text-decoration-none">
+                        <?php echo htmlspecialchars($_SESSION['user_name'] ?? '', ENT_QUOTES, 'UTF-8'); ?>
+                    </a>
 
 
-    </div>
+                    <a
+                        href="?page=logout"
+                        class="btn btn-outline-light btn-sm">
+                        خروج
+                    </a>
 
-</nav>
+                </div>
+
+
+            <?php endif; ?>
+
+
+        </div>
+
+    </nav>

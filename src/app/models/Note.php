@@ -31,11 +31,11 @@ class Note
 
         switch ($sort) {
             case 'newest':
-                $sql .= " ORDER BY notes.created_at DESC, notes.id DESC";
+                $sql .= " ORDER BY notes.updated_at DESC, notes.id DESC";
                 break;
             case 'oldest':
             default:
-                $sql .= " ORDER BY notes.created_at ASC, notes.id ASC";
+                $sql .= " ORDER BY notes.updated_at ASC, notes.id ASC";
                 break;
         }
 
@@ -134,9 +134,9 @@ class Note
         }
 
         if ($sort === 'oldest') {
-            $sql .= " ORDER BY notes.created_at ASC, notes.id ASC";
+            $sql .= " ORDER BY notes.updated_at ASC, notes.id ASC";
         } else {
-            $sql .= " ORDER BY notes.created_at DESC, notes.id DESC";
+            $sql .= " ORDER BY notes.updated_at DESC, notes.id DESC";
         }
 
         if ($limit !== null) {

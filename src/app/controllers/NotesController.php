@@ -107,7 +107,7 @@ class NotesController extends Controller
 
             $allNotes = array_values($allNotes);
             usort($allNotes, static function ($left, $right) use ($sort) {
-                $comparison = strcmp((string) $left->created_at, (string) $right->created_at);
+                $comparison = strcmp((string) $left->updated_at, (string) $right->updated_at);
                 if ($comparison === 0) {
                     $comparison = (int) $left->id <=> (int) $right->id;
                 }
